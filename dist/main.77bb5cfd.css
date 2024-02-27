@@ -1,0 +1,36 @@
+:root {
+  --colour-text-primary: #2b2a2b;
+  --colour-text-secondary: #908989;
+  --colour-text-light: #afaaaa;
+  --colour-bg-grey: #f2f2f1;
+  --colour-bg-green: #b8c6c6;
+  --colour-rust: #be6643;
+  --colour-fawn: #c9b6a6;
+  --colour-white: #fff;
+  --colour-black: #000;
+  --font-serif: "Neuton", serif;
+  --font-sans: "Mulish", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--colour-text-primary);
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/*# sourceMappingURL=/main.77bb5cfd.css.map */
