@@ -1,0 +1,36 @@
+@use 'base';
+
+.projects {
+  background-color: var(--colour-bg-grey);
+  clip-path: var(--bg-curved);
+  padding: 8rem 16rem;
+  margin-top: -3rem;
+
+  &__heading-2 {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+}
+
+.project {
+  display: flex;
+
+  &__img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  &__description {
+    max-width: 60ch;
+    padding: 3rem;
+    background-color: var(--colour-white);
+    box-shadow: 0 1.5rem 2rem rgba(#000, 0.15);
+  }
+}

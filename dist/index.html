@@ -10,18 +10,119 @@
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,200&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/main.77bb5cfd.css">
     <title>Lauren Champs</title>
   <script src="/main.77bb5cfd.js"></script></head>
   <body>
     <header class="header">
-      <div class="logo">Lauren Champs</div>
-      <ul class="nav">
-        <li class="nav__item">About</li>
-        <li class="nav__item">Projects</li>
-        <li class="nav__item">Connect</li>
-      </ul>
+      <nav class="nav">
+        <div class="nav__logo">
+          Lauren Champs<span class="logo-dot">.</span>
+        </div>
+        <ul class="nav__menu">
+          <li class="nav__item">
+            <a href="#" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Projects</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
     </header>
+    <main>
+      <section class="hero">
+        <div class="hero__content">
+          <img src="/lc-logo-square-transparent-bg.2921c451.png" alt="" class="hero__logo">
+          <h1 class="hero__heading-1 heading-1">
+            <span class="hero__intro">Hi there, I'm</span>Lauren Champs<span class="logo-dot">.</span>
+          </h1>
+          <p class="hero__subheading">
+            I'm a web developer based in Adelaide, Australia.
+          </p>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about__content">
+          <h2 class="heading-2 about__heading-2">About me</h2>
+          <p class="about__text">
+            I like building things. I believe that online spaces should be
+            accessible for everyone.
+          </p>
+          <p class="about__text"></p>
+        </div>
+      </section>
+      <section class="projects">
+        <h2 class="heading-2 projects__heading-2">Projects</h2>
+        <div class="projects__group">
+          <article class="project">
+            <div class="project__image">
+              <img src="/ng-bowden-bookings.39f24334.jpg" alt="" class="project__img" width="700" height="400">
+            </div>
+            <div class="project__description">
+              <h3 class="heading-3 project__heading-3">Description</h3>
+              <p>
+                Full stack web booking application. Submitted as my final
+                project for CS50, this web application is an online booking
+                portal for residents in an apartment building to reserve our
+                communal rooftop garden space. Users can view, create, edit and
+                delete bookings by logging into their account.
+              </p>
+              <h3 class="heading-3 project__heading-3">
+                Languages + technologies
+              </h3>
+              <p>HTML | Bootstrap 5 | JavaScript | Python | Flask | SQLite</p>
+              <a class="project__link" href="#">Video preview</a>
+              <a href="#" class="project__link">View code</a>
+            </div>
+          </article>
+          <article class="project">
+            <div class="project__image">
+              <img src="/weather.05192634.jpg" alt="" class="project__img" width="700" height="400">
+            </div>
+            <div class="project__description">
+              <h3 class="heading-3 project__heading-3">Description</h3>
+              <p>
+                Weather web application for desktop. Using Fetch + Geolocation
+                APIs this application will display current and forecast weather
+                data for the user's location by default or any location using
+                the search.
+              </p>
+              <h3 class="heading-3 project__heading-3">
+                Languages + technologies
+              </h3>
+              <p>HTML | CSS | JavaScript</p>
+              <a class="project__link" href="#">Live preview</a>
+              <a href="#" class="project__link">View code</a>
+            </div>
+          </article>
+          <article class="project">
+            <div class="project__image">
+              <img src="/mylibrary.eda4e94d.jpg" alt="" class="project__img" width="700" height="400">
+            </div>
+            <div class="project__description">
+              <h3 class="heading-3 project__heading-3">Description</h3>
+              <p>
+                Minimalist library application - add and remove books from your
+                library, stored in local storage.
+              </p>
+              <p>
+                Built using an object oriented programming approach and making
+                use of ES6 classes.
+              </p>
+              <h3 class="heading-3 project__heading-3">
+                Languages + technologies
+              </h3>
+              <p>HTML | CSS | JavaScript</p>
+              <a class="project__link" href="#">Live preview</a>
+              <a href="#" class="project__link">View code</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
