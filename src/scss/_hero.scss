@@ -7,12 +7,18 @@
     align-items: last baseline;
   }
 
-  // &__logo {
-  //   height: 18rem;
-  //   width: 18rem;
-  //   display: block;
-  //   transform: translateY(1.3rem);
-  // }
+  &__logo {
+    height: 18rem;
+    width: 18rem;
+    display: block;
+    transform: translateY(1.3rem);
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: base.$bp-md) {
+      height: 12rem;
+      width: 12rem;
+    }
+  }
 
   &__intro {
     display: block;
@@ -25,5 +31,9 @@
 
   &__subheading {
     font-size: 2.2rem;
+
+    @media only screen and (max-width: base.$bp-sm) {
+      font-size: 1.8rem;
+    }
   }
 }

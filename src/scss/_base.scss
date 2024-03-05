@@ -26,14 +26,20 @@
   --font-caps: 'Montserrat', sans-serif;
 
   // SPACING
-  --spacing-xs: 1.2rem;
+  --spacing-xs: 0.8rem;
   --spacing-sm: 1.8rem;
   --spacing-md: 2.4rem;
   --spacing-lg: 3.6rem;
 
-  // BACKGROUND SHAPE
-  --bg-curved: xywh(0 0 150% 150% round 3.5rem);
+  // // BACKGROUND SHAPE
+  // --bg-curved: xywh(0 0 150% 150% round 3.5rem);
 }
+
+// RESPONSIVE BREAKPOINTS
+$bp-xl: 85em; // 1350px
+$bp-lg: 62.5em; // 1000px
+$bp-md: 50em; // 800px
+$bp-sm: 37.5em; // 600px
 
 *,
 *::before,
@@ -47,6 +53,10 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; // so 1rem = 10px;
   scroll-behavior: smooth;
+
+  @media only screen and (max-width: $bp-xl) {
+    font-size: 54%;
+  }
 }
 
 body {
@@ -67,8 +77,11 @@ body {
   }
 
   &__about {
-    grid-template-columns: 1fr repeat(7, 10rem) 1fr;
-    grid-template-rows: 8rem max-content repeat(6, 10rem);
+    grid-template-columns:
+      minmax(6rem, 1fr)
+      repeat(7, minmax(min-content, 9rem))
+      minmax(6rem, 1fr);
+    grid-template-rows: 8rem max-content repeat(6, 9rem);
   }
 }
 
@@ -82,14 +95,30 @@ body {
 
 .heading-1 {
   @extend %heading;
-
   font-size: 8rem;
+
+  @media only screen and (max-width: $bp-md) {
+    font-size: 6rem;
+  }
+
+  @media only screen and (max-width: $bp-sm) {
+    font-size: 4rem;
+  }
 }
 
 .heading-2 {
   @extend %heading;
-
   font-size: 5.2rem;
+}
+
+.heading-3 {
+  @extend %heading;
+  font-size: 3.6rem;
+}
+
+.heading-4 {
+  @extend %heading;
+  font-size: 2.2rem;
 }
 
 p {

@@ -35,12 +35,20 @@
       grid-column: 3 / span 1;
       grid-row: 6 / span 1;
       transform: translate(-4rem, -2rem);
+
+      @media only screen and (max-width: base.$bp-sm) {
+        transform: translate(0, 3rem);
+      }
     }
 
     &--css {
       grid-column: 7 / span 1;
       grid-row: 4 / span 1;
       transform: translate(2rem, -1rem);
+
+      @media only screen and (max-width: base.$bp-sm) {
+        transform: translate(-7rem, 0);
+      }
     }
 
     &--sass {
@@ -52,6 +60,10 @@
     &--js {
       grid-column: 5 / span 1;
       grid-row: 5 / span 1;
+
+      @media only screen and (max-width: base.$bp-sm) {
+        transform: translate(2rem, 0);
+      }
     }
 
     &--git {
@@ -84,5 +96,10 @@
   }
   &__dev {
     padding: 2rem;
+
+    @media only screen and (max-width: base.$bp-sm) {
+      width: 8rem;
+      padding: 1.5rem;
+    }
   }
 }

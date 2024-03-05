@@ -4,8 +4,21 @@
   background-color: var(--colour-white);
   margin-top: -3rem;
   display: grid;
-  grid-template-columns: 1fr minmax(25rem, 50ch) 2fr minmax(30rem, 50ch) 1fr;
+  grid-template-columns:
+    minmax(6rem, 1fr)
+    minmax(25rem, 50ch)
+    minmax(6rem, 2fr)
+    minmax(30rem, 50ch)
+    minmax(6rem, 1fr);
   grid-template-rows: 10rem auto 10rem;
+
+  @media only screen and (max-width: base.$bp-md) {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 6rem auto;
+    gap: 8rem;
+  }
 
   &__acknowledgement {
     grid-column: 4 / span 1;

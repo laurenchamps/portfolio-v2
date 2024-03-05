@@ -4,12 +4,12 @@
   background-color: var(--colour-bg-grey);
   // clip-path: var(--bg-curved);
   // margin-top: -3rem;
-  padding: 8rem 6rem;
   display: grid;
-  grid-template-columns: 1fr auto auto 1fr;
+  grid-template-columns: 1fr 90vw 1fr;
   grid-template-rows: minmax(10vh, 1fr) auto minmax(10vh, 1fr);
 
   &__heading-2 {
+    margin-top: 6rem;
     margin-bottom: var(--spacing-lg);
     grid-column: 2 / span 1;
   }
@@ -18,36 +18,63 @@
     grid-column: 2 / span 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 14rem;
-    margin-top: 12rem;
+    margin-top: 6rem;
+
+    @media only screen and (max-width: base.$bp-xl) {
+      gap: 8rem;
+    }
+
+    @media only screen and (max-width: base.$bp-lg) {
+      align-items: center;
+      gap: 12rem;
+    }
   }
 }
 
 .project {
+  grid-column: 2 / span 1;
   display: flex;
+  justify-content: center;
+
+  &__image-container {
+    max-width: 90rem;
+    flex-shrink: 1;
+    transform: translateX(-3rem);
+
+    @media only screen and (max-width: base.$bp-lg) {
+      transform: translateX(0);
+    }
+  }
 
   &__img {
-    max-width: 100%;
     display: block;
-    object-fit: cover;
-    object-position: left;
-    border-radius: 3rem;
-    transform: translateX(-3rem);
+    // object-fit: cover;
+    object-position: center;
+    max-width: 100%;
+    height: auto;
   }
 
   &__text {
+    align-self: start;
     max-width: 55ch;
+    min-width: 40ch;
     padding: 4rem;
-    background-color: var(--colour-white);
-    border: 2px solid var(--colour-text-primary);
-    transform: translate(4rem, -6rem);
+    background-color: rgba(#fff, 0.8);
+    transform: translate(4rem, 2rem);
     box-shadow: 1rem 1.5rem 3rem rgba(#000, 0.15);
-    border-radius: 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-shrink: 1;
+    gap: 1.6rem;
+    flex-shrink: 2;
     z-index: 1;
+
+    @media only screen and (max-width: base.$bp-xl) {
+      transform: translate(0, 0);
+      align-self: center;
+    }
   }
 
   &__links {
@@ -61,5 +88,23 @@
     color: var(--colour-text-primary);
     color: var(--colour-text-secondary);
     text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    letter-spacing: 0.05rem;
+  }
+
+  &__heading-3 {
+    font-family: var(--font-sans);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  &__heading-4 {
+    font-family: var(--font-sans);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  @media only screen and (max-width: base.$bp-lg) {
+    flex-direction: column-reverse;
+    max-width: 55ch;
   }
 }

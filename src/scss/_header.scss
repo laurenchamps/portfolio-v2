@@ -8,6 +8,10 @@
   position: sticky;
   top: 0;
   z-index: 10;
+
+  @media only screen and (max-width: base.$bp-sm) {
+    height: 10rem;
+  }
 }
 
 .nav {
@@ -16,6 +20,12 @@
   justify-content: space-between;
   width: 100%;
   margin: 0 6rem;
+  gap: 6rem;
+
+  @media only screen and (max-width: base.$bp-sm) {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
   &__logo {
     font-family: var(--font-serif);
@@ -24,6 +34,10 @@
     transform: translateY(-10%);
     display: flex;
     align-items: baseline;
+
+    @media only screen and (max-width: base.$bp-sm) {
+      flex-shrink: 0;
+    }
   }
 
   &__menu {
@@ -31,6 +45,10 @@
     display: flex;
     justify-content: space-between;
     gap: 6rem;
+
+    @media only screen and (max-width: base.$bp-sm) {
+      gap: 2rem;
+    }
   }
 
   &__link:link,
