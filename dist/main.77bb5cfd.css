@@ -369,6 +369,7 @@ p {
   grid-column: 2/span 1;
   display: flex;
   justify-content: center;
+  align-items: start;
 }
 .project__image-container {
   max-width: 90rem;
